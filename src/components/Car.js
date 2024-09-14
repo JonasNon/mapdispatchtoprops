@@ -1,9 +1,10 @@
 import React from 'react'
+import { useParams } from 'react-router';
 import { Container, Paper, Chip } from '@mui/material';
 import cars from '../cars.json' // remove this
 
 const Car = (props) => {
-    const id = props.match.params.id
+    const { id } = useParams();
     {/* Change cars to props.cars and remove the cars.json import above */}
     const car = props.cars.find(c => c.id == id)
 
